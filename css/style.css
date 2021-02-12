@@ -311,7 +311,7 @@ blockquote {
       .main-nav__link--active:before {
         content: '';
         position: absolute;
-        bottom: -3px;
+        bottom: -4px;
         width: 100%;
         border-bottom: 2px solid #9f3e85; }
 
@@ -322,8 +322,9 @@ blockquote {
   .services__heading {
     margin: 0;
     text-align: center;
-    font-size: 36px;
-    color: #9f3e85; }
+    font-size: 38px;
+    color: #9f3e85;
+    text-shadow: 1px 1px 2px #000000; }
   .services__part-one {
     margin: 50px 150px;
     display: -ms-grid;
@@ -393,7 +394,8 @@ blockquote {
     font-size: 28px;
     font-weight: bold; }
     .services__phone--text {
-      color: #dc923e; }
+      color: #dc923e;
+      text-shadow: 1px 1px 2px #000000; }
     .services__phone--link {
       color: #9f3e85;
       -webkit-transition: all .8s;
