@@ -1,0 +1,483 @@
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  /* stylelint-disable */
+  /* stylelint-enable */ }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: '';
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir='rtl'] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/* montserrat-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Montserrat Medium"), local("Montserrat-Medium"), url("../fonts/montserrat-v12-latin_cyrillic-ext-500.woff2") format("woff2"), url("../fonts/montserrat-v12-latin_cyrillic-ext-500.woff") format("woff"); }
+
+/* montserrat-500italic - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Montserrat Medium Italic"), local("Montserrat-MediumItalic"), url("../fonts/montserrat-v12-latin_cyrillic-ext-500italic.woff2") format("woff2"), url("../fonts/montserrat-v12-latin_cyrillic-ext-500italic.woff") format("woff"); }
+
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-v12-latin_cyrillic-ext-700.woff2") format("woff2"), url("../fonts/montserrat-v12-latin_cyrillic-ext-700.woff") format("woff"); }
+
+* {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  line-height: 1.5; }
+
+html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a,
+blockquote {
+  text-decoration: none; }
+
+.page-header {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 115px;
+  background-color: #fff7ec;
+  background-image: url(../img/second-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: drop-shadow(0 0 10px #000000);
+          filter: drop-shadow(0 0 10px #000000);
+  z-index: 1; }
+  .page-header__inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 60px; }
+    @media (max-width: 1050px) {
+      .page-header__inner {
+        padding: 10px 35px; } }
+    @media (max-width: 760px) {
+      .page-header__inner {
+        padding: 10px 20px; } }
+    @media (max-width: 450px) {
+      .page-header__inner {
+        padding: 10px 10px; } }
+  .page-header__logo {
+    position: absolute;
+    margin-left: -75px;
+    top: 5px;
+    left: 50%;
+    width: 150px; }
+  .page-header__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    color: #9f3e85;
+    line-height: 1; }
+    @media (max-width: 1150px) {
+      .page-header__text {
+        right: 40px; } }
+    @media (max-width: 1050px) {
+      .page-header__text {
+        right: 10px; } }
+    @media (max-width: 850px) {
+      .page-header__text {
+        right: 20px; } }
+    @media (max-width: 560px) {
+      .page-header__text {
+        display: none; } }
+
+.page-main {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  background-color: #fefcef;
+  background-image: url(../img/main-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  @media (max-width: 1279px) {
+    .page-main {
+      background-position: right; } }
+  @media (max-width: 850px) {
+    .page-main {
+      background-position: -1950px 0; } }
+  @media (max-width: 560px) {
+    .page-main {
+      background-position: -2100px 0; } }
+  @media (max-width: 430px) {
+    .page-main {
+      background-position: -2200px 0; } }
+  .page-main__inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 60px; }
+    @media (max-width: 1050px) {
+      .page-main__inner {
+        padding: 0 35px; } }
+    @media (max-width: 760px) {
+      .page-main__inner {
+        padding: 0 20px; } }
+    @media (max-width: 450px) {
+      .page-main__inner {
+        padding: 0 10px; } }
+
+.page-footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 80px;
+  background-color: #fff7ec;
+  background-image: url(../img/second-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: drop-shadow(0 0 10px #000000);
+          filter: drop-shadow(0 0 10px #000000);
+  z-index: 1; }
+  .page-footer__inner {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 60px; }
+    @media (max-width: 1050px) {
+      .page-footer__inner {
+        padding: 10px 35px; } }
+    @media (max-width: 760px) {
+      .page-footer__inner {
+        padding: 10px 20px; } }
+    @media (max-width: 450px) {
+      .page-footer__inner {
+        padding: 10px 10px; } }
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  max-width: 1280px; }
+  .main-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 80px; }
+    @media (max-width: 1050px) {
+      .main-nav__list {
+        padding: 0 50px; } }
+    @media (max-width: 950px) {
+      .main-nav__list {
+        padding: 0 70px; } }
+    @media (max-width: 850px) {
+      .main-nav__list {
+        display: none; } }
+    .main-nav__list--part-one, .main-nav__list--part-two {
+      width: 27%; }
+  .main-nav__item {
+    position: relative;
+    text-transform: uppercase;
+    list-style-type: none; }
+  .main-nav__link {
+    color: #dc923e;
+    -webkit-transition: all .8s;
+    transition: all .8s; }
+    .main-nav__link:hover {
+      color: #9f3e85; }
+    .main-nav__link--active {
+      color: #9f3e85; }
+      .main-nav__link--active:before {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        width: 100%;
+        border-bottom: 2px solid #9f3e85; }
+
+.services {
+  margin: 80px 0;
+  /* stylelint-disable */
+  /* stylelint-enable */ }
+  .services__heading {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #9f3e85; }
+  .services__part-one {
+    margin: 50px 150px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 50px 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 250px 30px 250px;
+    grid-template-rows: repeat(2, 250px);
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+        grid-template-areas: 'hairdressing-services   microblading' 'depilation              manicure-pedicure'; }
+    @media (max-width: 1200px) {
+      .services__part-one {
+        margin: 50px 100px; } }
+    @media (max-width: 950px) {
+      .services__part-one {
+        margin: 50px 50px; } }
+    @media (max-width: 850px) {
+      .services__part-one {
+        margin: 50px 100px;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows: (250px)[4];
+        grid-template-rows: repeat(4, 250px);
+            grid-template-areas: 'hairdressing-services' 'microblading' 'depilation' 'manicure-pedicure'; } }
+    @media (max-width: 560px) {
+      .services__part-one {
+        margin: 50px 10px; } }
+  .services__part-two {
+    margin: 50px 150px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 50px 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 250px;
+    grid-template-rows: 250px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+        grid-template-areas: 'cosmetology   massage'; }
+    @media (max-width: 1200px) {
+      .services__part-two {
+        margin: 50px 100px; } }
+    @media (max-width: 950px) {
+      .services__part-two {
+        margin: 50px 50px; } }
+    @media (max-width: 850px) {
+      .services__part-two {
+        margin: 50px 100px;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows: 250px 250px;
+        grid-template-rows: 250px 250px;
+            grid-template-areas: 'cosmetology' 'massage'; } }
+    @media (max-width: 560px) {
+      .services__part-two {
+        margin: 50px 10px; } }
+  .services__phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .services__phone--text {
+      color: #dc923e; }
+    .services__phone--link {
+      color: #9f3e85;
+      -webkit-transition: all .8s;
+      transition: all .8s; }
+      .services__phone--link:hover {
+        color: #da688b; }
+
+.product-card {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #9f3e85;
+  cursor: pointer;
+  background-color: #828282;
+  -webkit-filter: grayscale(99%);
+          filter: grayscale(99%);
+  -webkit-transition: all .8s;
+  transition: all .8s; }
+  .product-card:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0); }
+    .product-card:hover .product-card__name {
+      color: #9f3e85; }
+  .product-card__manicure-pedicure {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: manicure-pedicure;
+    background-image: url(../img/manicure-pedicure.png); }
+  .product-card__depilation {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: depilation;
+    background-image: url(../img/depilation.png); }
+  .product-card__microblading {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: microblading;
+    background-image: url(../img/microblading.png); }
+  .product-card__hairdressing-services {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: hairdressing-services;
+    background-image: url(../img/hairdressing-services.png); }
+  @media (max-width: 850px) {
+      .product-card__manicure-pedicure {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1; }
+      .product-card__depilation {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1; }
+      .product-card__microblading {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1; }
+      .product-card__hairdressing-services {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; } }
+  .product-card__cosmetology {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: cosmetology;
+    background-image: url(../img/cosmetology.png); }
+  .product-card__massage {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: massage;
+    background-image: url(../img/massage.png); }
+  @media (max-width: 850px) {
+      .product-card__cosmetology {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; }
+      .product-card__massage {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1; } }
+  .product-card__name {
+    display: inline-block;
+    margin: 175px 0 0 20px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 30px;
+    line-height: 1;
+    color: #ffffff;
+    -webkit-transition: all .8s;
+    transition: all .8s; }
+
+.dividing-strip {
+  position: relative;
+  margin: 20px auto;
+  width: 76%;
+  border-top: 3px solid #dc923e; }
+
+/*# sourceMappingURL=style.css.map */
