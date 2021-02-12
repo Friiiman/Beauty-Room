@@ -14,12 +14,29 @@
 
     .product-card__name {
       color: $second-color;
+      text-shadow: 1px 1px 2px $black;
     }
+  }
+
+  &__name {
+    display: inline-block;
+    margin: 170px 0 0 20px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 30px;
+    line-height: 1;
+    color: $white;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px $black;
   }
 
   &__manicure-pedicure {
     grid-area: manicure-pedicure;
     background-image: url(../img/manicure-pedicure.png);
+  }
+
+  &__manicure-pedicure .product-card__name {
+    margin: 20px 0 0 20px;
   }
 
   &__depilation {
@@ -30,6 +47,10 @@
   &__microblading {
     grid-area: microblading;
     background-image: url(../img/microblading.png);
+  }
+
+  &__microblading .product-card__name {
+    margin: 195px 0 0 20px;
   }
 
   &__hairdressing-services {
@@ -45,16 +66,5 @@
   &__massage {
     grid-area: massage;
     background-image: url(../img/massage.png);
-  }
-
-  &__name {
-    display: inline-block;
-    margin: 175px 0 0 20px;
-    padding: 0;
-    vertical-align: top;
-    font-size: 30px;
-    line-height: 1;
-    color: $white;
-    transition: all .8s;
   }
 }

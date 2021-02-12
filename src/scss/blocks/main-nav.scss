@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
   max-width: 1280px;
 
   &__list {
@@ -30,12 +30,13 @@
 
   &__item {
     position: relative;
-    text-transform: uppercase;
+    font-size: 22px;
+    // text-transform: uppercase;
     list-style-type: none;
   }
 
   &__link {
-    color: $main-color;
+    color: $second-color-light;
     transition: all .8s;
 
     // &:before {

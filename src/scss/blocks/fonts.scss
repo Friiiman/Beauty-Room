@@ -30,3 +30,13 @@
       url('../fonts/montserrat-v12-latin_cyrillic-ext-700.woff2') format('woff2'), /* Super Modern Browsers */
       url('../fonts/montserrat-v12-latin_cyrillic-ext-700.woff') format('woff'), /* Modern Browsers */
 }
+
+/* Mon Amour One Medium-550 - latin_cyrillic */
+@font-face {
+  font-family: "Mon Amour One Medium";
+  font-weight: normal;
+  font-style: normal;
+  src: local('Mon Amour One Medium'), local('Mon-Amour-One-Medium'),
+    url("../fonts/mon-amour-one-medium.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/mon-amour-one-medium.woff2") format("woff2"), /* Modern Browsers */
+}
