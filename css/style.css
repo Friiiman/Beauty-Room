@@ -94,8 +94,15 @@
   font-display: swap;
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-v12-latin_cyrillic-ext-700.woff2") format("woff2"), url("../fonts/montserrat-v12-latin_cyrillic-ext-700.woff") format("woff"); }
 
+/* Mon Amour One Medium-550 - latin_cyrillic */
+@font-face {
+  font-family: "Mon Amour One Medium";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Mon Amour One Medium"), local("Mon-Amour-One-Medium"), url("../fonts/mon-amour-one-medium.woff") format("woff"), url("../fonts/mon-amour-one-medium.woff2") format("woff2"); }
+
 * {
-  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Mon Amour One Medium, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   line-height: 1.5; }
 
 html {
@@ -265,7 +272,7 @@ blockquote {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
   max-width: 1280px; }
   .main-nav__list {
     display: -webkit-box;
@@ -291,10 +298,10 @@ blockquote {
       width: 27%; }
   .main-nav__item {
     position: relative;
-    text-transform: uppercase;
+    font-size: 22px;
     list-style-type: none; }
   .main-nav__link {
-    color: #dc923e;
+    color: #da688b;
     -webkit-transition: all .8s;
     transition: all .8s; }
     .main-nav__link:hover {
@@ -315,7 +322,6 @@ blockquote {
   .services__heading {
     margin: 0;
     text-align: center;
-    text-transform: uppercase;
     font-size: 36px;
     color: #9f3e85; }
   .services__part-one {
@@ -385,8 +391,7 @@ blockquote {
     margin: 0 auto;
     text-align: center;
     font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase; }
+    font-weight: bold; }
     .services__phone--text {
       color: #dc923e; }
     .services__phone--link {
@@ -412,12 +417,26 @@ blockquote {
     -webkit-filter: grayscale(0);
             filter: grayscale(0); }
     .product-card:hover .product-card__name {
-      color: #9f3e85; }
+      color: #9f3e85;
+      text-shadow: 1px 1px 2px #000000; }
+  .product-card__name {
+    display: inline-block;
+    margin: 170px 0 0 20px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 30px;
+    line-height: 1;
+    color: #ffffff;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px #000000; }
   .product-card__manicure-pedicure {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
     grid-area: manicure-pedicure;
     background-image: url(../img/manicure-pedicure.png); }
+  .product-card__manicure-pedicure .product-card__name {
+    margin: 20px 0 0 20px; }
   .product-card__depilation {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
@@ -428,6 +447,8 @@ blockquote {
     -ms-grid-column: 3;
     grid-area: microblading;
     background-image: url(../img/microblading.png); }
+  .product-card__microblading .product-card__name {
+    margin: 195px 0 0 20px; }
   .product-card__hairdressing-services {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -463,21 +484,11 @@ blockquote {
       .product-card__massage {
     -ms-grid-row: 2;
     -ms-grid-column: 1; } }
-  .product-card__name {
-    display: inline-block;
-    margin: 175px 0 0 20px;
-    padding: 0;
-    vertical-align: top;
-    font-size: 30px;
-    line-height: 1;
-    color: #ffffff;
-    -webkit-transition: all .8s;
-    transition: all .8s; }
 
 .dividing-strip {
   position: relative;
   margin: 20px auto;
-  width: 76%;
+  width: 75%;
   border-top: 3px solid #dc923e; }
 
 /*# sourceMappingURL=style.css.map */
