@@ -1,0 +1,103 @@
+.services {
+  margin: 80px 0;
+
+  &__heading {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: $second-color;
+  }
+
+  /* stylelint-disable */
+  &__part-one {
+    margin: 50px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 250px);
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    grid-template-areas:
+      'hairdressing-services   microblading'
+      'depilation              manicure-pedicure';
+
+    @media (max-width: 1200px) {
+      margin: 50px 100px;
+    }
+
+    @media (max-width: 950px) {
+      margin: 50px 50px;
+    }
+
+    @media (max-width: 850px) {
+      margin: 50px 100px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 250px);
+      grid-template-areas:
+        'hairdressing-services'
+        'microblading'
+        'depilation'
+        'manicure-pedicure';
+    }
+
+    @media (max-width: 560px) {
+      margin: 50px 10px;
+    }
+  }
+
+  &__part-two {
+    margin: 50px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-areas:
+      'cosmetology   massage';
+
+    @media (max-width: 1200px) {
+      margin: 50px 100px;
+    }
+
+    @media (max-width: 950px) {
+      margin: 50px 50px;
+    }
+
+    @media (max-width: 850px) {
+      margin: 50px 100px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 250px 250px;
+      grid-template-areas:
+        'cosmetology'
+        'massage';
+    }
+
+    @media (max-width: 560px) {
+      margin: 50px 10px;
+    }
+  }
+  /* stylelint-enable */
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &--text {
+      color: $main-color;
+    }
+
+    &--link {
+      color: $second-color;
+      transition: all .8s;
+
+      &:hover {
+        color: $second-color-light;
+      }
+    }
+  }
+}

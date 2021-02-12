@@ -1,0 +1,60 @@
+.product-card {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid $second-color;
+  cursor: pointer;
+  background-color: $gray-dark;
+  filter: grayscale(99%);
+  transition: all .8s;
+
+  &:hover {
+    filter: grayscale(0);
+
+    .product-card__name {
+      color: $second-color;
+    }
+  }
+
+  &__manicure-pedicure {
+    grid-area: manicure-pedicure;
+    background-image: url(../img/manicure-pedicure.png);
+  }
+
+  &__depilation {
+    grid-area: depilation;
+    background-image: url(../img/depilation.png);
+  }
+
+  &__microblading {
+    grid-area: microblading;
+    background-image: url(../img/microblading.png);
+  }
+
+  &__hairdressing-services {
+    grid-area: hairdressing-services;
+    background-image: url(../img/hairdressing-services.png);
+  }
+
+  &__cosmetology {
+    grid-area: cosmetology;
+    background-image: url(../img/cosmetology.png);
+  }
+
+  &__massage {
+    grid-area: massage;
+    background-image: url(../img/massage.png);
+  }
+
+  &__name {
+    display: inline-block;
+    margin: 175px 0 0 20px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 30px;
+    line-height: 1;
+    color: $white;
+    transition: all .8s;
+  }
+}

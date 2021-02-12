@@ -1,0 +1,65 @@
+.page-header {
+  position: relative;
+  flex: 0 0 auto;
+  height: 115px;
+  background-color: $header-page-color;
+  background-image: url(../img/second-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0 0 10px $black);
+  z-index: 1;
+
+  &__inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 60px;
+
+    @media (max-width: $screen-xmd) {
+      padding: 10px 35px;
+    }
+
+    @media (max-width: $screen-md) {
+      padding: 10px 20px;
+    }
+
+    @media (max-width: $screen-sm) {
+      padding: 10px 10px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    margin-left: -75px;
+    top: 5px;
+    left: 50%;
+    width: 150px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    color: $second-color;
+    line-height: 1;
+
+    @media (max-width: 1150px) {
+      right: 40px;
+    }
+
+    @media (max-width: 1050px) {
+      right: 10px;
+    }
+
+    @media (max-width: 850px) {
+      right: 20px;
+    }
+
+    @media (max-width: 560px) {
+      display: none;
+    }
+  }
+}
