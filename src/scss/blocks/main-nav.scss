@@ -60,13 +60,13 @@
     &--active {
       color: $second-color;
 
-      &:before {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        width: 100%;
-        border-bottom: 2px solid $second-color;
-      }
+      // &:before {
+      //   content: '';
+      //   position: absolute;
+      //   bottom: -4px;
+      //   width: 100%;
+      //   border-bottom: 2px solid $second-color;
+      // }
     }
   }
 }
