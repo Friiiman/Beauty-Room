@@ -1,0 +1,83 @@
+.discount-card {
+  perspective: 800px;
+
+  &:hover {
+
+   .discount-card__inner--front, .discount-card__inner--back {
+      border: 2px solid $second-color;
+    }
+
+    .discount-card__name {
+      color: $second-color;
+    }
+  }
+
+  &__weight-loss-course {
+    grid-area: weight-loss-course;
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 1.2s;
+    transform-style: preserve-3d;
+
+    &--front, &--back {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      background-color: $gray-light;
+      border: 2px solid $second-color-light;
+      transition: all 0.8s;
+    }
+
+    &--front {
+      background-image: url(../img/weight-loss-course.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+      background-image: url(../img/second-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+      text-align: center;
+    }
+  }
+
+  &--flipped {
+    transform: rotateY(-180deg);
+  }
+
+  &__name {
+    display: inline-block;
+    margin: 170px 6px 0 20px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 30px;
+    line-height: 1;
+    color: $white;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px $black;
+  }
+
+  &__description {
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 28px;
+    color: $second-color-light;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px $black;
+  }
+}

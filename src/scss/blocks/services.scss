@@ -1,5 +1,4 @@
 .services {
-  margin: 80px 0;
 
   &__heading {
     margin: 0;
@@ -18,7 +17,7 @@
     grid-column-gap: 50px;
     grid-row-gap: 30px;
     grid-template-areas:
-      'hairdressing-services   microblading'
+      'hairdressing-services   eyebrow-modeling'
       'depilation              manicure-pedicure';
 
     @media (max-width: 1200px) {
@@ -35,7 +34,7 @@
       grid-template-rows: repeat(4, 250px);
       grid-template-areas:
         'hairdressing-services'
-        'microblading'
+        'eyebrow-modeling'
         'depilation'
         'manicure-pedicure';
     }

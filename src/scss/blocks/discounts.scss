@@ -1,0 +1,43 @@
+.discounts {
+
+  &__heading {
+    margin: 0;
+    text-align: center;
+    font-size: 38px;
+    color: $main-color;
+    text-shadow: 1px 1px 2px $black;
+  }
+
+  /* stylelint-disable */
+  &__items {
+    margin: 50px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    grid-template-areas:
+      'weight-loss-course   .';
+
+    @media (max-width: 1200px) {
+      margin: 50px 100px;
+    }
+
+    @media (max-width: 950px) {
+      margin: 50px 50px;
+    }
+
+    @media (max-width: 850px) {
+      margin: 50px 100px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(1, 250px);
+      grid-template-areas:
+        'weight-loss-course';
+    }
+
+    @media (max-width: 560px) {
+      margin: 50px 10px;
+    }
+  }
+  /* stylelint-enable */
+}

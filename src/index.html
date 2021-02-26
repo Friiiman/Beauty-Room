@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Студия красоты Beauty Room</title>
+  <title>Предоставляемые услуги Beauty Room</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -15,9 +15,9 @@
 
   <header class="page-header">
     <div class="page-header__inner">
-      <a href="#" class="page-header__logo">
+      <div class="page-header__logo">
         <img src="img/logo.png" alt="logo" class="page-header__logo--img">
-      </a>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav__list main-nav__list--part-one">
           <li class="main-nav__item">
@@ -42,26 +42,27 @@
   </header>
 
   <main class="page-main">
+    <h1 class="page-main__heading">Студия красоты Beauty Room</h1>
     <div class="page-main__inner">
       <section class="services">
         <h2 class="services__heading">Виды услуг</h2>
 
         <div class="services__part-one">
-          <div class="product-card product-card__manicure-pedicure">
+          <a href="manicure-pedicure.html" class="product-card product-card__manicure-pedicure">
             <span class="product-card__name">Маникюр, Педикюр</span>
-          </div>
+          </a>
 
-          <div class="product-card product-card__depilation">
+          <a href="depilation.html" class="product-card product-card__depilation">
             <span class="product-card__name">Депиляция</span>
-          </div>
+          </a>
 
-          <div class="product-card product-card__microblading">
-            <span class="product-card__name">Микроблейдинг</span>
-          </div>
+          <a href="eyebrow-modeling.html" class="product-card product-card__eyebrow-modeling">
+            <span class="product-card__name">Моделирование бровей, перманент</span>
+          </a>
 
-          <div class="product-card product-card__hairdressing-services">
+          <a href="hairdressing-services.html" class="product-card product-card__hairdressing-services">
             <span class="product-card__name">Парикмахерские услуги</span>
-          </div>
+          </a>
         </div>
 
         <div class="services__phone">
@@ -72,13 +73,13 @@
         <div class="dividing-strip"></div>
 
         <div class="services__part-two">
-          <div class="product-card product-card__cosmetology">
+          <a href="cosmetalogy.html" class="product-card product-card__cosmetology">
             <span class="product-card__name">Косметология</span>
-          </div>
+          </a>
 
-          <div class="product-card product-card__massage">
+          <a href="massage.html" class="product-card product-card__massage">
             <span class="product-card__name">Аппаратный массаж</span>
-          </div>
+          </a>
         </div>
 
         <div class="services__phone">
@@ -93,6 +94,8 @@
   <footer class="page-footer">
     <div class="page-footer__inner"></div>
   </footer>
+
+  <script src="./js/script.js"></script>
 
 </body>
 </html>

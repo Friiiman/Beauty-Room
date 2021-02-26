@@ -5,7 +5,7 @@
   background-position: center;
   border: 2px solid $second-color-light;
   cursor: pointer;
-  background-color: $gray-dark;
+  background-color: $gray-light;
   // filter: grayscale(99%);
   transition: all .8s;
 
@@ -35,23 +35,15 @@
     background-image: url(../img/manicure-pedicure.png);
   }
 
-  // &__manicure-pedicure .product-card__name {
-  //   margin: 90px 0 0 20px;
-  // }
-
   &__depilation {
     grid-area: depilation;
     background-image: url(../img/depilation.png);
   }
 
-  &__microblading {
-    grid-area: microblading;
-    background-image: url(../img/microblading.png);
+  &__eyebrow-modeling {
+    grid-area: eyebrow-modeling;
+    background-image: url(../img/eyebrow-modeling.png);
   }
-
-  // &__microblading .product-card__name {
-  //   margin: 195px 0 0 20px;
-  // }
 
   &__hairdressing-services {
     grid-area: hairdressing-services;
