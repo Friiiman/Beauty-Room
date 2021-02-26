@@ -104,22 +104,6 @@
 * {
   font-family: Mon Amour One Medium, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
   line-height: 1.5; }
-  * ::-webkit-scrollbar {
-    width: 5px;
-    height: 3px; }
-  * ::-webkit-scrollbar-button {
-    height: 0;
-    background-color: #9f3e85; }
-  * ::-webkit-scrollbar-track {
-    background-color: #9f3e85; }
-  * ::-webkit-scrollbar-track-piece {
-    background-color: #9f3e85; }
-  * ::-webkit-scrollbar-thumb {
-    height: 50px;
-    background-color: #dc923e;
-    border-radius: 10px; }
-  * ::-webkit-scrollbar-corner {
-    background-color: #da688b; }
 
 html {
   height: 100%; }
@@ -155,7 +139,7 @@ blockquote {
   background-image: url(../img/second-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   -webkit-filter: drop-shadow(0 0 10px #000000);
           filter: drop-shadow(0 0 10px #000000);
   z-index: 1; }
@@ -209,24 +193,17 @@ blockquote {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  padding: 80px 0;
   overflow: auto;
   background-color: #fefcef;
   background-image: url(../img/main-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
-  @media (max-width: 1279px) {
+  background-position: center;
+  background-attachment: fixed; }
+  @media (max-width: 759px) {
     .page-main {
       background-position: right; } }
-  @media (max-width: 850px) {
-    .page-main {
-      background-position: -1950px 0; } }
-  @media (max-width: 560px) {
-    .page-main {
-      background-position: -2100px 0; } }
-  @media (max-width: 430px) {
-    .page-main {
-      background-position: -2200px 0; } }
   .page-main__inner {
     position: relative;
     max-width: 1280px;
@@ -241,6 +218,8 @@ blockquote {
     @media (max-width: 450px) {
       .page-main__inner {
         padding: 0 10px; } }
+  .page-main__heading {
+    display: none; }
 
 .page-footer {
   -webkit-box-flex: 0;
@@ -252,7 +231,7 @@ blockquote {
   background-image: url(../img/second-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   -webkit-filter: drop-shadow(0 0 10px #000000);
           filter: drop-shadow(0 0 10px #000000);
   z-index: 1; }
@@ -328,7 +307,6 @@ blockquote {
       color: #9f3e85; }
 
 .services {
-  margin: 80px 0;
   /* stylelint-disable */
   /* stylelint-enable */ }
   .services__heading {
@@ -347,7 +325,7 @@ blockquote {
     grid-template-rows: repeat(2, 250px);
     grid-column-gap: 50px;
     grid-row-gap: 30px;
-        grid-template-areas: 'hairdressing-services   microblading' 'depilation              manicure-pedicure'; }
+        grid-template-areas: 'hairdressing-services   eyebrow-modeling' 'depilation              manicure-pedicure'; }
     @media (max-width: 1200px) {
       .services__part-one {
         margin: 50px 100px; } }
@@ -361,7 +339,7 @@ blockquote {
         grid-template-columns: 1fr;
         -ms-grid-rows: (250px)[4];
         grid-template-rows: repeat(4, 250px);
-            grid-template-areas: 'hairdressing-services' 'microblading' 'depilation' 'manicure-pedicure'; } }
+            grid-template-areas: 'hairdressing-services' 'eyebrow-modeling' 'depilation' 'manicure-pedicure'; } }
     @media (max-width: 560px) {
       .services__part-one {
         margin: 50px 10px; } }
@@ -422,7 +400,7 @@ blockquote {
   background-position: center;
   border: 2px solid #da688b;
   cursor: pointer;
-  background-color: #828282;
+  background-color: #dddddd;
   -webkit-transition: all .8s;
   transition: all .8s; }
   .product-card:hover {
@@ -450,11 +428,11 @@ blockquote {
     -ms-grid-column: 1;
     grid-area: depilation;
     background-image: url(../img/depilation.png); }
-  .product-card__microblading {
+  .product-card__eyebrow-modeling {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
-    grid-area: microblading;
-    background-image: url(../img/microblading.png); }
+    grid-area: eyebrow-modeling;
+    background-image: url(../img/eyebrow-modeling.png); }
   .product-card__hairdressing-services {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -467,7 +445,7 @@ blockquote {
       .product-card__depilation {
     -ms-grid-row: 3;
     -ms-grid-column: 1; }
-      .product-card__microblading {
+      .product-card__eyebrow-modeling {
     -ms-grid-row: 2;
     -ms-grid-column: 1; }
       .product-card__hairdressing-services {
@@ -496,5 +474,156 @@ blockquote {
   margin: 20px auto;
   width: 75%;
   border-top: 3px solid #dc923e; }
+
+.price-list {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  width: 80%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #ffffff;
+  background-image: url(../img/second-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .price-list__heading {
+    font-size: 24px;
+    padding: 5px;
+    text-align: center;
+    color: #dc923e;
+    border: 1px solid #000; }
+  .price-list__name {
+    padding: 5px;
+    width: 75%;
+    font-size: 20px;
+    color: #9f3e85;
+    border: 1px solid #000; }
+  .price-list__price {
+    padding: 5px;
+    width: 25%;
+    text-align: center;
+    font-size: 19px;
+    color: #da688b;
+    border: 1px solid #000; }
+  .price-list__important {
+    font-size: 18px;
+    padding: 5px;
+    text-align: center;
+    color: #dc923e;
+    border: 1px solid #000; }
+
+.discounts {
+  /* stylelint-disable */
+  /* stylelint-enable */ }
+  .discounts__heading {
+    margin: 0;
+    text-align: center;
+    font-size: 38px;
+    color: #dc923e;
+    text-shadow: 1px 1px 2px #000000; }
+  .discounts__items {
+    margin: 50px 150px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 50px 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 250px;
+    grid-template-rows: 250px;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+        grid-template-areas: 'weight-loss-course   .'; }
+    @media (max-width: 1200px) {
+      .discounts__items {
+        margin: 50px 100px; } }
+    @media (max-width: 950px) {
+      .discounts__items {
+        margin: 50px 50px; } }
+    @media (max-width: 850px) {
+      .discounts__items {
+        margin: 50px 100px;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -ms-grid-rows: (250px)[1];
+        grid-template-rows: repeat(1, 250px);
+            grid-template-areas: 'weight-loss-course'; } }
+    @media (max-width: 560px) {
+      .discounts__items {
+        margin: 50px 10px; } }
+
+.discount-card {
+  -webkit-perspective: 800px;
+          perspective: 800px; }
+  .discount-card:hover .discount-card__inner--front, .discount-card:hover .discount-card__inner--back {
+    border: 2px solid #9f3e85; }
+  .discount-card:hover .discount-card__name {
+    color: #9f3e85; }
+  .discount-card__weight-loss-course {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: weight-loss-course; }
+  @media (max-width: 850px) {
+      .discount-card__weight-loss-course {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; } }
+  .discount-card__inner {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: all 1.2s;
+    transition: all 1.2s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d; }
+    .discount-card__inner--front, .discount-card__inner--back {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      background-color: #dddddd;
+      border: 2px solid #da688b;
+      -webkit-transition: all 0.8s;
+      transition: all 0.8s; }
+    .discount-card__inner--front {
+      background-image: url(../img/weight-loss-course.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top; }
+    .discount-card__inner--back {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+      background-image: url(../img/second-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+      text-align: center; }
+  .discount-card--flipped {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg); }
+  .discount-card__name {
+    display: inline-block;
+    margin: 170px 6px 0 20px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 30px;
+    line-height: 1;
+    color: #ffffff;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px #000000; }
+  .discount-card__description {
+    display: inline-block;
+    margin-top: 5%;
+    margin-bottom: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 28px;
+    color: #da688b;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px #000000; }
 
 /*# sourceMappingURL=style.css.map */
