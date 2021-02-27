@@ -1,14 +1,39 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
   margin-top: 10px;
   max-width: 1280px;
+  z-index: -1;
+
+  @media (max-width: 850px) {
+    position: absolute;
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 50px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 115px;
+    background-color: $white;
+    border-bottom: 2px solid $second-color;
+    background-image: url(../img/second-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all .5s;
+
+  }
+
+  &--active {
+    transform: scaleY(1);
+  }
 
   &__list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 0 80px;
 
     @media (max-width: $screen-xmd) {
@@ -20,18 +45,31 @@
     }
 
     @media (max-width: 850px) {
-      display: none;
+      padding: 0;
     }
 
     &--part-one, &--part-two {
       width: 27%;
+
+      @media (max-width: 850px) {
+        display: block;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &--part-one {
+
+      @media (max-width: 850px) {
+        flex-direction: column;
+      }
     }
   }
 
   &__item {
     position: relative;
     font-size: 22px;
-    // text-transform: uppercase;
     list-style-type: none;
   }
 
@@ -39,34 +77,23 @@
     color: $second-color-light;
     transition: all .8s;
 
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   bottom: -3px;
-    //   width: 100%;
-    //   border-bottom: 2px solid $second-color;
-    //   opacity: 0;
-    //   transition: all .8s;
-    // }
+    @media (max-width: 850px) {
+      display: block;
+      padding: 10px;
+      background-color: $white;
+      border-top: 2px solid $second-color;
+      background-image: url(../img/second-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
 
     &:hover {
       color: $second-color;
     }
 
-    // &:hover:before {
-    //   opacity: 1;
-    // }
-
     &--active {
       color: $second-color;
-
-      // &:before {
-      //   content: '';
-      //   position: absolute;
-      //   bottom: -4px;
-      //   width: 100%;
-      //   border-bottom: 2px solid $second-color;
-      // }
     }
   }
 }

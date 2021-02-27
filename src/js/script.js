@@ -6,12 +6,18 @@ svg4everybody();
 
 $(document).ready(function($){
 
+  //*****CARD FLIP*****
   $('.discount-card__inner').click(function(){
     $(this).toggleClass('discount-card--flipped');
   });
 
-  // $('.discount-card').click(function(){
-  //   $(this).siblings('.discount-card__inner').toggleClass('discount-card--flipped');
-  // });
+  //*****BURGER MENU*****
+  $('.burger').click(function(){
+    $('.burger__item').toggleClass('burger--active');
+  });
+
+  $('.burger').click(function(){
+    $('.main-nav').toggleClass('main-nav--active');
+  });
 
 });
