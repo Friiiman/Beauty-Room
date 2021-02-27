@@ -15,6 +15,13 @@
 
   <header class="page-header">
     <div class="page-header__inner">
+
+      <div class="burger">
+        <button id="burger__item" class="burger__item">
+          <span id="burger__name" class="burger__name">Открыть меню</span>
+        </button>
+      </div>
+
       <a href="index.html" class="page-header__logo">
         <img src="img/logo.png" alt="logo" class="page-header__logo--img">
       </a>
@@ -42,7 +49,28 @@
   </header>
 
   <main class="page-main">
-    <div class="page-main__inner"></div>
+    <div class="page-main__inner">
+      <section class="contacts">
+
+        <div class="contacts__phone">
+          <span class="contacts__phone--heading">Телефоны для записи:</span>
+          <span class="contacts__phone--services">Парикмахерские услуги, моделирование бровей, перманент, депиляция, маникюр, педикюр</span>
+          <a href="tel:89216379427" class="contacts__phone--link">+7 921 637 94 27</a>
+          <span class="contacts__phone--services">Косметология, аппаратный массаж</span>
+          <a href="tel:89111274061" class="contacts__phone--link">+7 911 127 40 61</a>
+        </div>
+
+        <div class="contacts__description">
+          <div class="contacts__list">
+            <span class="contacts__list--item">Конюшенная пл, 2В<br><span>3 этаж, код 44</span></span>
+            <span class="contacts__list--item">Режим работы:<br><span>10:00 - 21:00</span></span>
+            <span class="contacts__list--item">Станция метро:<br><span>Невский проспект</span></span>
+          </div>
+
+          <div class="map" id="map"></div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="page-footer">
@@ -50,6 +78,37 @@
   </footer>
 
   <script src="./js/script.js"></script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3ee8f09d-0fc6-4089-9b80-4bddbbf75ea5&lang=ru_RU" type="text/javascript">
+  </script>
+
+  <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+      // Создание карты.
+      const myMap = new ymaps.Map("map", {
+          // Координаты центра карты.
+          // Порядок по умолчанию: «широта, долгота».
+          // Чтобы не определять координаты центра карты вручную,
+          // воспользуйтесь инструментом Определение координат.
+          center: [59.940173, 30.326562],
+          // Уровень масштабирования. Допустимые значения:
+          // от 0 (весь мир) до 19.
+          zoom: 17,
+          controls: ['smallMapDefaultSet']
+      });
+      const myIcon = new ymaps.Placemark([59.940173, 30.326562], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/geotag.png',
+        iconImageSize: [45, 45],
+      });
+      myMap.geoObjects.add(myIcon),
+      myMap.behaviors.disable('scrollZoom'),
+      myMap.controls.add('trafficControl')
+    }
+  </script>
 
 </body>
 </html>

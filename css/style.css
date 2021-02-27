@@ -141,8 +141,7 @@ blockquote {
   background-size: cover;
   background-position: top;
   -webkit-filter: drop-shadow(0 0 10px #000000);
-          filter: drop-shadow(0 0 10px #000000);
-  z-index: 1; }
+          filter: drop-shadow(0 0 10px #000000); }
   .page-header__inner {
     position: relative;
     max-width: 1280px;
@@ -162,7 +161,8 @@ blockquote {
     margin-left: -75px;
     top: 5px;
     left: 50%;
-    width: 150px; }
+    width: 150px;
+    z-index: 10; }
   .page-header__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -200,7 +200,8 @@ blockquote {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  z-index: -5; }
   @media (max-width: 759px) {
     .page-main {
       background-position: right; } }
@@ -266,11 +267,37 @@ blockquote {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-top: 10px;
-  max-width: 1280px; }
+  max-width: 1280px;
+  z-index: -1; }
+  @media (max-width: 850px) {
+    .main-nav {
+      position: absolute;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-top: 0;
+      padding-top: 50px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 115px;
+      background-color: #ffffff;
+      border-bottom: 2px solid #9f3e85;
+      background-image: url(../img/second-background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      -webkit-transform-origin: top;
+              transform-origin: top;
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transition: all .5s;
+      transition: all .5s; } }
+  .main-nav--active {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1); }
   .main-nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -278,9 +305,6 @@ blockquote {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     padding: 0 80px; }
     @media (max-width: 1050px) {
       .main-nav__list {
@@ -290,9 +314,21 @@ blockquote {
         padding: 0 70px; } }
     @media (max-width: 850px) {
       .main-nav__list {
-        display: none; } }
+        padding: 0; } }
     .main-nav__list--part-one, .main-nav__list--part-two {
       width: 27%; }
+      @media (max-width: 850px) {
+        .main-nav__list--part-one, .main-nav__list--part-two {
+          display: block;
+          margin: 0;
+          width: 100%;
+          text-align: center; } }
+    @media (max-width: 850px) {
+      .main-nav__list--part-one {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .main-nav__item {
     position: relative;
     font-size: 22px;
@@ -301,10 +337,85 @@ blockquote {
     color: #da688b;
     -webkit-transition: all .8s;
     transition: all .8s; }
+    @media (max-width: 850px) {
+      .main-nav__link {
+        display: block;
+        padding: 10px;
+        background-color: #ffffff;
+        border-top: 2px solid #9f3e85;
+        background-image: url(../img/second-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; } }
     .main-nav__link:hover {
       color: #9f3e85; }
     .main-nav__link--active {
       color: #9f3e85; }
+
+.burger {
+  display: none;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  background-color: transparent; }
+  @media (max-width: 850px) {
+    .burger {
+      display: block; } }
+  .burger__item {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background-color: transparent;
+    border: none; }
+  .burger__item:before, .burger__item:after {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #9f3e85; }
+  .burger__item:before {
+    top: -6px; }
+  .burger__item:after {
+    bottom: 6px; }
+  .burger__name {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    margin: auto;
+    width: 100%;
+    height: 6px;
+    font-size: 0; }
+  .burger__name:before, .burger__name:after {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #9f3e85; }
+  .burger--active:before, .burger--active:after {
+    opacity: 0; }
+  .burger--active:before {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px); }
+  .burger--active:after {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); }
+  .burger--active span:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition-delay: .2s;
+            transition-delay: .2s; }
+  .burger--active span:after {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    -webkit-transition-delay: .2s;
+            transition-delay: .2s; }
 
 .services {
   /* stylelint-disable */
@@ -422,22 +533,22 @@ blockquote {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
     grid-area: manicure-pedicure;
-    background-image: url(../img/manicure-pedicure.png); }
+    background-image: url(../img/services/manicure-pedicure.png); }
   .product-card__depilation {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: depilation;
-    background-image: url(../img/depilation.png); }
+    background-image: url(../img/services/depilation.png); }
   .product-card__eyebrow-modeling {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
     grid-area: eyebrow-modeling;
-    background-image: url(../img/eyebrow-modeling.png); }
+    background-image: url(../img/services/eyebrow-modeling.png); }
   .product-card__hairdressing-services {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: hairdressing-services;
-    background-image: url(../img/hairdressing-services.png); }
+    background-image: url(../img/services/hairdressing-services.png); }
   @media (max-width: 850px) {
       .product-card__manicure-pedicure {
     -ms-grid-row: 4;
@@ -455,12 +566,12 @@ blockquote {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: cosmetology;
-    background-image: url(../img/cosmetology.png); }
+    background-image: url(../img/services/cosmetology.png); }
   .product-card__massage {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
     grid-area: massage;
-    background-image: url(../img/massage.png); }
+    background-image: url(../img/services/massage.png); }
   @media (max-width: 850px) {
       .product-card__cosmetology {
     -ms-grid-row: 1;
@@ -586,7 +697,7 @@ blockquote {
       -webkit-transition: all 0.8s;
       transition: all 0.8s; }
     .discount-card__inner--front {
-      background-image: url(../img/weight-loss-course.png);
+      background-image: url(../img/discounts/weight-loss-course.png);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: top; }
@@ -625,5 +736,99 @@ blockquote {
     -webkit-transition: all .8s;
     transition: all .8s;
     text-shadow: 1px 1px 2px #000000; }
+
+.contacts {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .contacts__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%; }
+    @media (max-width: 900px) {
+      .contacts__description {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+  .contacts__phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 70px;
+    font-weight: bold;
+    font-size: 28px;
+    color: #dc923e;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px #000000; }
+    .contacts__phone--heading {
+      margin-bottom: 50px; }
+    .contacts__phone--link {
+      margin-bottom: 30px;
+      color: #da688b;
+      -webkit-transition: all .8s;
+      transition: all .8s; }
+      .contacts__phone--link:hover {
+        color: #9f3e85; }
+  .contacts__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 35%; }
+    @media (max-width: 900px) {
+      .contacts__list {
+        display: block;
+        width: 100%;
+        margin-bottom: 70px; } }
+    .contacts__list--item {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 28px;
+      color: #dc923e;
+      -webkit-transition: all .8s;
+      transition: all .8s;
+      text-shadow: 1px 1px 2px #000000; }
+      @media (max-width: 900px) {
+        .contacts__list--item {
+          margin-right: 50px;
+          margin-bottom: 50px; } }
+      .contacts__list--item span {
+        color: #9f3e85; }
+
+.map {
+  margin: 0 auto;
+  width: 60%;
+  height: 400px;
+  border: 2px solid #9f3e85; }
+  @media (max-width: 900px) {
+    .map {
+      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
