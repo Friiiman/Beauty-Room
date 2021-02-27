@@ -141,7 +141,8 @@ blockquote {
   background-size: cover;
   background-position: top;
   -webkit-filter: drop-shadow(0 0 10px #000000);
-          filter: drop-shadow(0 0 10px #000000); }
+          filter: drop-shadow(0 0 10px #000000);
+  z-index: 2; }
   .page-header__inner {
     position: relative;
     max-width: 1280px;
@@ -201,7 +202,7 @@ blockquote {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  z-index: -5; }
+  z-index: 1; }
   @media (max-width: 759px) {
     .page-main {
       background-position: right; } }
