@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: top;
   filter: drop-shadow(0 0 10px $black);
+  z-index: 2;
 
   &__inner {
     position: relative;
