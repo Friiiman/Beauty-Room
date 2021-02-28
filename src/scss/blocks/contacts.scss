@@ -2,6 +2,10 @@
   flex-direction: column;
   justify-content: space-between;
 
+  &__heading {
+    display: none;
+  }
+
   &__description {
     display: flex;
     flex-direction: row;
