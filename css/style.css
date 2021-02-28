@@ -347,7 +347,7 @@ blockquote {
         background-image: url(../img/second-background.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom; } }
+        background-position: center; } }
     .main-nav__link:hover {
       color: #9f3e85; }
     .main-nav__link--active {
