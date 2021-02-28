@@ -283,13 +283,13 @@ blockquote {
       width: 100%;
       left: 0;
       right: 0;
-      top: 115px;
+      top: 114px;
       background-color: #ffffff;
       border-bottom: 2px solid #9f3e85;
       background-image: url(../img/second-background.jpg);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: 0 -120px;
       -webkit-transform-origin: top;
               transform-origin: top;
       -webkit-transform: scaleY(0);
@@ -347,7 +347,7 @@ blockquote {
         background-image: url(../img/second-background.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center; } }
+        background-position: bottom; } }
     .main-nav__link:hover {
       color: #9f3e85; }
     .main-nav__link--active {
