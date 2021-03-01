@@ -1,10 +1,11 @@
 .map {
-  margin: 0 auto;
+  margin: 15px auto 0;
   width: 60%;
-  height: 400px;
+  height: 370px;
   border: 2px solid $second-color;
 
   @media (max-width: 900px) {
+    margin-top: 0;
     width: 100%;
   }
 }

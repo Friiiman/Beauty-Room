@@ -27,19 +27,31 @@
     color: $main-color;
     transition: all .8s;
     text-shadow: 1px 1px 2px $black;
+  }
 
-    &--heading {
-      margin-bottom: 50px;
-    }
+  &__phone-list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 
-    &--link {
-      margin-bottom: 30px;
-      color: $second-color-light;
-      transition: all .8s;
+  &__phone-icon {
+    display: inline-block;
+    margin-top: -17px;
+    margin-right: 5px;
+  }
 
-      &:hover {
-        color: $second-color;
-      }
+  &__phone-heading {
+    margin-bottom: 50px;
+  }
+
+  &__phone-link {
+    margin-bottom: 30px;
+    color: $second-color-light;
+    transition: all .8s;
+
+    &:hover {
+      color: $second-color;
     }
   }
 
@@ -55,23 +67,23 @@
       // height: 350px;
       margin-bottom: 70px;
     }
+  }
 
-    &--item {
-      display: inline-block;
-      font-weight: bold;
-      font-size: 28px;
-      color: $main-color;
-      transition: all .8s;
-      text-shadow: 1px 1px 2px $black;
+  &__list-item {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 28px;
+    color: $main-color;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px $black;
 
-      @media (max-width: 900px) {
-        margin-right: 50px;
-        margin-bottom: 50px;
-      }
+    @media (max-width: 900px) {
+      margin-right: 50px;
+      margin-bottom: 50px;
+    }
 
-      & span {
-        color: $second-color;
-      }
+    & span {
+      color: $second-color;
     }
   }
 }

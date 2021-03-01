@@ -23,10 +23,10 @@
       </div>
 
       <a href="index.html" class="page-header__logo">
-        <img src="img/logo.png" alt="logo" class="page-header__logo--img">
+        <img src="img/logo.png" alt="logo" class="page-header__logo-img">
       </a>
       <nav class="main-nav">
-        <ul class="main-nav__list main-nav__list--part-one">
+        <ul class="main-nav__list main-nav__list-part-one">
           <li class="main-nav__item">
             <a href="index.html" class="main-nav__link">Услуги</a>
           </li>
@@ -34,7 +34,7 @@
             <a href="discounts.html" class="main-nav__link">Акции</a>
           </li>
         </ul>
-        <ul class="main-nav__list main-nav__list--part-two">
+        <ul class="main-nav__list main-nav__list-part-two">
           <li class="main-nav__item">
             <a href="#" class="main-nav__link main-nav__link--active">Контакты</a>
           </li>
@@ -55,18 +55,28 @@
         <h2 class="contacts__heading">Наши контакты</h2>
 
         <div class="contacts__phone">
-          <span class="contacts__phone--heading">Телефоны для записи:</span>
-          <span class="contacts__phone--services">Парикмахерские услуги, моделирование бровей, перманент, депиляция, маникюр, педикюр</span>
-          <a href="https://wa.me/79216379427" class="contacts__phone--link" target="_blank">+7 921 637 94 27</a>
-          <span class="contacts__phone--services">Косметология, аппаратный массаж</span>
-          <a href="https://wa.me/79111274061" class="contacts__phone--link" target="_blank">+7 911 127 40 61</a>
+          <span class="contacts__phone-heading">Телефоны для записи:</span>
+          <span class="contacts__phone-services">Парикмахерские услуги, моделирование бровей, перманент, депиляция, маникюр, педикюр</span>
+          <div class="contacts__phone-list">
+            <svg class="contacts__phone-icon" width="32" height="32">
+              <use xlink:href="img/sprite.svg#whatsapp"></use>
+            </svg>
+            <a href="https://wa.me/79216379427" class="contacts__phone-link" target="_blank">+7 921 637 94 27</a>
+          </div>
+          <span class="contacts__phone-services">Косметология, аппаратный массаж</span>
+          <div class="contacts__phone-list">
+            <svg class="contacts__phone-icon" width="32" height="32">
+              <use xlink:href="img/sprite.svg#whatsapp"></use>
+            </svg>
+            <a href="https://wa.me/79111274061" class="contacts__phone-link" target="_blank">+7 911 127 40 61</a>
+          </div>
         </div>
 
         <div class="contacts__description">
           <div class="contacts__list">
-            <span class="contacts__list--item">Конюшенная пл, 2В<br><span>3 этаж, код 44</span></span>
-            <span class="contacts__list--item">Режим работы:<br><span>10:00 - 21:00</span></span>
-            <span class="contacts__list--item">Станция метро:<br><span>Невский проспект</span></span>
+            <span class="contacts__list-item">Конюшенная пл, 2В<br><span>3 этаж, код 44</span></span>
+            <span class="contacts__list-item">Режим работы:<br><span>10:00 - 21:00</span></span>
+            <span class="contacts__list-item">Станция метро:<br><span>Невский проспект</span></span>
           </div>
 
           <div class="map" id="map"></div>

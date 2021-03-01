@@ -84,19 +84,32 @@
     text-align: center;
     font-size: 28px;
     font-weight: bold;
+  }
 
-    &--text {
-      color: $main-color;
-      text-shadow: 1px 1px 2px $black;
-    }
+  &__phone-text {
+    color: $main-color;
+    text-shadow: 1px 1px 2px $black;
+  }
 
-    &--link {
-      color: $second-color-light;
-      transition: all .8s;
+  &__phone-list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
 
-      &:hover {
-        color: $second-color;
-      }
+  &__phone-icon {
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 5px;
+  }
+
+  &__phone-link {
+    color: $second-color-light;
+    transition: all .8s;
+
+    &:hover {
+      color: $second-color;
     }
   }
 }

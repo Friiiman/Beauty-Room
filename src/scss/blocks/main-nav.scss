@@ -24,7 +24,6 @@
     transform-origin: top;
     transform: scaleY(0);
     transition: all .5s;
-
   }
 
   &--active {
@@ -47,23 +46,23 @@
     @media (max-width: 850px) {
       padding: 0;
     }
+  }
 
-    &--part-one, &--part-two {
-      width: 27%;
+  &__list-part-one, &__list-part-two {
+    width: 27%;
 
-      @media (max-width: 850px) {
-        display: block;
-        margin: 0;
-        width: 100%;
-        text-align: center;
-      }
+    @media (max-width: 850px) {
+      display: block;
+      margin: 0;
+      width: 100%;
+      text-align: center;
     }
+  }
 
-    &--part-one {
+  &__list-part-one {
 
-      @media (max-width: 850px) {
-        flex-direction: column;
-      }
+    @media (max-width: 850px) {
+      flex-direction: column;
     }
   }
 
