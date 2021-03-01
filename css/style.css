@@ -316,20 +316,20 @@ blockquote {
     @media (max-width: 850px) {
       .main-nav__list {
         padding: 0; } }
-    .main-nav__list--part-one, .main-nav__list--part-two {
-      width: 27%; }
-      @media (max-width: 850px) {
-        .main-nav__list--part-one, .main-nav__list--part-two {
-          display: block;
-          margin: 0;
-          width: 100%;
-          text-align: center; } }
+  .main-nav__list-part-one, .main-nav__list-part-two {
+    width: 27%; }
     @media (max-width: 850px) {
-      .main-nav__list--part-one {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column; } }
+      .main-nav__list-part-one, .main-nav__list-part-two {
+        display: block;
+        margin: 0;
+        width: 100%;
+        text-align: center; } }
+  @media (max-width: 850px) {
+    .main-nav__list-part-one {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .main-nav__item {
     position: relative;
     font-size: 22px;
@@ -495,15 +495,31 @@ blockquote {
     text-align: center;
     font-size: 28px;
     font-weight: bold; }
-    .services__phone--text {
-      color: #dc923e;
-      text-shadow: 1px 1px 2px #000000; }
-    .services__phone--link {
-      color: #da688b;
-      -webkit-transition: all .8s;
-      transition: all .8s; }
-      .services__phone--link:hover {
-        color: #9f3e85; }
+  .services__phone-text {
+    color: #dc923e;
+    text-shadow: 1px 1px 2px #000000; }
+  .services__phone-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .services__phone-icon {
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 5px; }
+  .services__phone-link {
+    color: #da688b;
+    -webkit-transition: all .8s;
+    transition: all .8s; }
+    .services__phone-link:hover {
+      color: #9f3e85; }
 
 .product-card {
   position: relative;
@@ -784,15 +800,28 @@ blockquote {
     -webkit-transition: all .8s;
     transition: all .8s;
     text-shadow: 1px 1px 2px #000000; }
-    .contacts__phone--heading {
-      margin-bottom: 50px; }
-    .contacts__phone--link {
-      margin-bottom: 30px;
-      color: #da688b;
-      -webkit-transition: all .8s;
-      transition: all .8s; }
-      .contacts__phone--link:hover {
-        color: #9f3e85; }
+  .contacts__phone-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .contacts__phone-icon {
+    display: inline-block;
+    margin-top: -17px;
+    margin-right: 5px; }
+  .contacts__phone-heading {
+    margin-bottom: 50px; }
+  .contacts__phone-link {
+    margin-bottom: 30px;
+    color: #da688b;
+    -webkit-transition: all .8s;
+    transition: all .8s; }
+    .contacts__phone-link:hover {
+      color: #9f3e85; }
   .contacts__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -810,28 +839,29 @@ blockquote {
         display: block;
         width: 100%;
         margin-bottom: 70px; } }
-    .contacts__list--item {
-      display: inline-block;
-      font-weight: bold;
-      font-size: 28px;
-      color: #dc923e;
-      -webkit-transition: all .8s;
-      transition: all .8s;
-      text-shadow: 1px 1px 2px #000000; }
-      @media (max-width: 900px) {
-        .contacts__list--item {
-          margin-right: 50px;
-          margin-bottom: 50px; } }
-      .contacts__list--item span {
-        color: #9f3e85; }
+  .contacts__list-item {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 28px;
+    color: #dc923e;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    text-shadow: 1px 1px 2px #000000; }
+    @media (max-width: 900px) {
+      .contacts__list-item {
+        margin-right: 50px;
+        margin-bottom: 50px; } }
+    .contacts__list-item span {
+      color: #9f3e85; }
 
 .map {
-  margin: 0 auto;
+  margin: 15px auto 0;
   width: 60%;
-  height: 400px;
+  height: 370px;
   border: 2px solid #9f3e85; }
   @media (max-width: 900px) {
     .map {
+      margin-top: 0;
       width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
