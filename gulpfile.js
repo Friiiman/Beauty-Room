@@ -54,6 +54,13 @@ function copyImg() {
 }
 exports.copyImg = copyImg;
 
+function copyFavicon() {
+  return src(`${dir.src}favicons/**/*.{ico,jpg,png,gif,svg,webp,xml,webmanifest}`)
+    .pipe(plumber())
+    .pipe(dest(`${dir.build}favicons/`));
+}
+exports.copyFavicon = copyFavicon;
+
 function buildSvgSprite() {
   return src(`${dir.src}svg-sprite/*.svg`)
     .pipe(svgmin(function (file) {
@@ -152,6 +159,7 @@ exports.default = series(
     styles,
     copyHTML,
     copyImg,
+    copyFavicon,
     buildSvgSprite,
     copyVendorsJs,
     copyFonts,
@@ -166,6 +174,7 @@ exports.build = series(
     styles,
     copyHTML,
     copyImg,
+    copyFavicon,
     buildSvgSprite,
     copyVendorsJs,
     copyFonts,
