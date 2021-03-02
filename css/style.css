@@ -743,10 +743,11 @@ blockquote {
     text-shadow: 1px 1px 2px #000000; }
   .discount-card__description {
     display: inline-block;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-bottom: 6px;
     margin-left: 6px;
     margin-right: 6px;
+    line-height: 1.4;
     padding: 0;
     vertical-align: top;
     font-size: 28px;
