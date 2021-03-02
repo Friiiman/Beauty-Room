@@ -7,12 +7,16 @@ svg4everybody();
 $(document).ready(function($){
 
   //*****BURGER MENU*****
-  $('.burger').click(function(){
-    $('.burger__item').toggleClass('burger--active');
-  });
-
-  $('.burger').click(function(){
-    $('.main-nav').toggleClass('main-nav--active');
+  $(document).mouseup(function (hideMenu){
+    $('.burger').click(function(){
+      $('.burger__item').toggleClass('burger--active');
+      $('.main-nav').toggleClass('main-nav--active');
+    });
+    if (!$(".main-nav").is(hideMenu.target) &&
+      $(".main-nav").has(hideMenu.target).length === 0) {
+        $(".main-nav").removeClass('main-nav--active');
+        $('.burger__item').removeClass('burger--active');
+      }
   });
 
   //*****CARD FLIP*****
