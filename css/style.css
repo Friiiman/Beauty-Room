@@ -378,13 +378,14 @@ blockquote {
     height: 6px;
     background-color: #9f3e85; }
   .burger__item:before {
-    top: -6px; }
+    top: 0px; }
   .burger__item:after {
-    bottom: 6px; }
+    bottom: 0px; }
   .burger__name {
     position: absolute;
     left: 0;
-    top: 6px;
+    top: 0px;
+    bottom: 0;
     margin: auto;
     width: 100%;
     height: 6px;
