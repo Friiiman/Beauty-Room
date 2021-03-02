@@ -203,7 +203,7 @@ blockquote {
   background-position: center;
   background-attachment: fixed;
   z-index: 1; }
-  @media (max-width: 759px) {
+  @media (max-width: 1000px) {
     .page-main {
       background-position: right; } }
   .page-main__inner {
