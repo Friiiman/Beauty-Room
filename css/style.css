@@ -518,7 +518,8 @@ blockquote {
   .services__phone-link {
     color: #da688b;
     -webkit-transition: all .8s;
-    transition: all .8s; }
+    transition: all .8s;
+    text-shadow: 1px 1px 2px #000000; }
     .services__phone-link:hover {
       color: #9f3e85; }
 
@@ -615,7 +616,8 @@ blockquote {
   background-image: url(../img/second-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  text-shadow: 1px 1px 1px #000000; }
   .price-list__heading {
     font-size: 24px;
     padding: 5px;
@@ -865,5 +867,22 @@ blockquote {
     .map {
       margin-top: 0;
       width: 100%; } }
+
+.social {
+  margin-top: 10px; }
+  .social__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .social__link:hover .social__text {
+      color: #9f3e85; }
+  .social__icon {
+    margin-top: 5px;
+    margin-right: 10px; }
+  .social__text {
+    font-size: 20px;
+    color: #da688b;
+    -webkit-transition: .8s all;
+    transition: .8s all; }
 
 /*# sourceMappingURL=style.css.map */
