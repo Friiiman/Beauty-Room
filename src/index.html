@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Предоставляемые услуги Beauty Room</title>
+  <title itemprop="headline">Предоставляемые услуги Beauty Room</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!-- FavIcons -->
@@ -19,6 +19,14 @@
   <meta name="msapplication-config" content="favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <!-- FavIcons END -->
+
+  <!-- Yandex -->
+  <meta name="yandex-verification" content="518b9e808057882e">
+  <!-- Yandex END -->
+
+  <!-- Google -->
+  <meta name="google-site-verification" content="NEklEBZZRy9IClPAuy2afpfBcdTYVsp045CWcZH5yyw">
+  <!-- Google END -->
 
   <meta name="description" content="Студия красоты Beauty Room в Санкт-Петербурге на Конюшенной площади предлагает обширный выбор услуг для волос, лица, тела и ногтей.">
   <meta name="robots" content="all">
@@ -39,9 +47,9 @@
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
 
-  <header class="page-header">
+  <header itemscope itemtype="http://schema.org/WPHeader" class="page-header">
     <div class="page-header__inner">
 
       <div class="burger">
@@ -50,85 +58,87 @@
         </button>
       </div>
 
-      <div class="page-header__logo">
-        <img src="img/logo.png" alt="logo" class="page-header__logo-img">
+      <div itemprop="url" class="page-header__logo">
+        <img itemprop="logo" src="img/logo.png" alt="logo" class="page-header__logo-img">
       </div>
-      <nav class="main-nav">
+      <nav itemscope itemtype="https://schema.org/SiteNavigationElement" class="main-nav">
         <ul class="main-nav__list main-nav__list-part-one">
-          <li class="main-nav__item">
-            <a href="#" class="main-nav__link main-nav__link--active">Услуги</a>
+          <li itemprop="name" class="main-nav__item">
+            <a itemprop="url" href="#" class="main-nav__link main-nav__link--active">Услуги</a>
           </li>
-          <li class="main-nav__item">
-            <a href="discounts.html" class="main-nav__link">Акции</a>
+          <li itemprop="name" class="main-nav__item">
+            <a itemprop="url" href="discounts.html" class="main-nav__link">Акции</a>
           </li>
         </ul>
         <ul class="main-nav__list main-nav__list-part-two">
-          <li class="main-nav__item">
-            <a href="contacts.html" class="main-nav__link">Контакты</a>
+          <li itemprop="name" class="main-nav__item">
+            <a itemprop="url" href="contacts.html" class="main-nav__link">Контакты</a>
           </li>
         </ul>
       </nav>
-      <div class="page-header__text">
-        <span>Конюшенная пл. 2В</span>
-        <span>3 этаж, код 44</span>
-        <span>10:00 - 21:00</span>
+      <div itemscope itemtype="http://schema.org/LocalBusiness">
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="page-header__text">
+          <span itemprop="streetAddress">Конюшенная пл. 2В</span>
+          <span itemprop="streetAddress">3 этаж, код 44</span>
+          <time itemprop="openingHours" datetime="10:00−21:00">10:00 - 21:00</time>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__heading">Студия красоты Beauty Room</h1>
+  <main itemscope itemprop="mainContentOfPage" class="page-main">
+    <h1 itemprop="name headline" class="page-main__heading">Студия красоты Beauty Room</h1>
     <div class="page-main__inner">
       <section class="services">
-        <h2 class="services__heading">Виды услуг</h2>
+        <h2 itemprop="headline" class="services__heading">Виды услуг</h2>
 
-        <div class="services__part-one">
-          <a href="manicure-pedicure.html" class="product-card product-card__manicure-pedicure">
-            <span class="product-card__name">Маникюр, Педикюр</span>
+        <div itemscope itemtype="http://schema.org/ItemList" class="services__part-one">
+          <a itemscope itemprop="itemListElement url" itemtype="http://schema.org/Product" href="manicure-pedicure.html" class="product-card product-card__manicure-pedicure">
+            <span itemprop="name" class="product-card__name">Маникюр, Педикюр</span>
           </a>
 
-          <a href="depilation.html" class="product-card product-card__depilation">
-            <span class="product-card__name">Депиляция</span>
+          <a itemscope itemprop="itemListElement url" itemtype="http://schema.org/Product" href="depilation.html" class="product-card product-card__depilation">
+            <span itemprop="name" class="product-card__name">Депиляция</span>
           </a>
 
-          <a href="eyebrow-modeling.html" class="product-card product-card__eyebrow-modeling">
-            <span class="product-card__name">Моделирование бровей, перманент</span>
+          <a itemscope itemprop="itemListElement url" itemtype="http://schema.org/Product" href="eyebrow-modeling.html" class="product-card product-card__eyebrow-modeling">
+            <span itemprop="name" class="product-card__name">Моделирование бровей, перманент</span>
           </a>
 
-          <a href="hairdressing-services.html" class="product-card product-card__hairdressing-services">
-            <span class="product-card__name">Парикмахерские услуги</span>
+          <a itemscope itemprop="itemListElement url" itemtype="http://schema.org/Product" href="hairdressing-services.html" class="product-card product-card__hairdressing-services">
+            <span itemprop="name" class="product-card__name">Парикмахерские услуги</span>
           </a>
         </div>
 
-        <div class="services__phone">
-          <span class="services__phone-text">Телефон для записи</span>
+        <div itemscope itemtype="http://schema.org/LocalBusiness" class="services__phone">
+          <span itemprop="name" class="services__phone-text">Телефон для записи</span>
           <div class="services__phone-list">
             <svg class="services__phone-icon" width="32" height="32">
               <use xlink:href="img/sprite.svg#whatsapp"></use>
             </svg>
-            <a href="https://wa.me/79216379427" class="services__phone-link" target="_blank">+7 921 637-94-27</a>
+            <a itemprop="telephone url" href="https://wa.me/79216379427" class="services__phone-link" target="_blank">+7 921 637-94-27</a>
           </div>
         </div>
 
         <div class="dividing-strip"></div>
 
-        <div class="services__part-two">
-          <a href="cosmetalogy.html" class="product-card product-card__cosmetology">
-            <span class="product-card__name">Косметология</span>
+        <div itemscope itemtype="http://schema.org/ItemList" class="services__part-two">
+          <a itemscope itemprop="itemListElement url" itemtype="http://schema.org/Product" href="cosmetalogy.html" class="product-card product-card__cosmetology">
+            <span itemprop="name" class="product-card__name">Косметология</span>
           </a>
 
-          <a href="massage.html" class="product-card product-card__massage">
-            <span class="product-card__name">Аппаратный массаж</span>
+          <a itemscope itemprop="itemListElement url" itemtype="http://schema.org/Product" href="massage.html" class="product-card product-card__massage">
+            <span itemprop="name" class="product-card__name">Аппаратный массаж</span>
           </a>
         </div>
 
-        <div class="services__phone">
-          <span class="services__phone-text">Телефон для записи</span>
+        <div itemscope itemtype="http://schema.org/LocalBusiness" class="services__phone">
+          <span itemprop="name" class="services__phone-text">Телефон для записи</span>
           <div class="services__phone-list">
             <svg class="services__phone-icon" width="32" height="32">
               <use xlink:href="img/sprite.svg#whatsapp"></use>
             </svg>
-            <a href="https://wa.me/79111274061" class="services__phone-link" target="_blank">+7 911 127-40-61</a>
+            <a itemprop="telephone url" href="https://wa.me/79111274061" class="services__phone-link" target="_blank">+7 911 127-40-61</a>
           </div>
         </div>
 
@@ -136,7 +146,7 @@
     </div>
   </main>
 
-  <footer class="page-footer">
+  <footer itemscope itemtype="https://schema.org/WPFooter" class="page-footer">
     <div class="page-footer__inner">
       <div class="social">
         <a href="https://www.instagram.com/beauty.room_spb/" target="_blank" class="social__link">

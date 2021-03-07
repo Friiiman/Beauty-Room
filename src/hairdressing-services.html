@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Парикмахерские услуги Beauty Room</title>
+  <title itemprop="headline">Парикмахерские услуги Beauty Room</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!-- FavIcons -->
@@ -39,9 +39,9 @@
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/WebPage">
 
-  <header class="page-header">
+  <header itemscope itemtype="http://schema.org/WPHeader" class="page-header">
     <div class="page-header__inner">
 
       <div class="burger">
@@ -50,95 +50,97 @@
         </button>
       </div>
 
-      <a href="index.html" class="page-header__logo">
-        <img src="img/logo.png" alt="logo" class="page-header__logo-img">
+      <a itemprop="url" href="index.html" class="page-header__logo">
+        <img itemprop="logo" src="img/logo.png" alt="logo" class="page-header__logo-img">
       </a>
-      <nav class="main-nav">
+      <nav itemscope itemtype="https://schema.org/SiteNavigationElement" class="main-nav">
         <ul class="main-nav__list main-nav__list-part-one">
-          <li class="main-nav__item">
-            <a href="index.html" class="main-nav__link">Услуги</a>
+          <li itemprop="name" class="main-nav__item">
+            <a itemprop="url" href="index.html" class="main-nav__link">Услуги</a>
           </li>
-          <li class="main-nav__item">
-            <a href="discounts.html" class="main-nav__link">Акции</a>
+          <li itemprop="name" class="main-nav__item">
+            <a itemprop="url" href="discounts.html" class="main-nav__link">Акции</a>
           </li>
         </ul>
         <ul class="main-nav__list main-nav__list-part-two">
-          <li class="main-nav__item">
-            <a href="contacts.html" class="main-nav__link">Контакты</a>
+          <li itemprop="name" class="main-nav__item">
+            <a itemprop="url" href="contacts.html" class="main-nav__link">Контакты</a>
           </li>
         </ul>
       </nav>
-      <div class="page-header__text">
-        <span>Конюшенная пл. 2В</span>
-        <span>3 этаж, код 44</span>
-        <span>10:00 - 21:00</span>
+      <div itemscope itemtype="http://schema.org/LocalBusiness">
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="page-header__text">
+          <span itemprop="streetAddress">Конюшенная пл. 2В</span>
+          <span itemprop="streetAddress">3 этаж, код 44</span>
+          <time itemprop="openingHours" datetime="10:00−21:00">10:00 - 21:00</time>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__heading">Услуги парикмахера Beauty Room</h1>
+  <main itemscope itemprop="mainContentOfPage" class="page-main">
+    <h1 itemprop="name headline" class="page-main__heading">Услуги парикмахера Beauty Room</h1>
     <div class="page-main__inner">
 
-      <table class="price-list">
+      <table itemscope itemtype="http://schema.org/ItemList" class="price-list">
         <tr>
-          <th class="price-list__heading" colspan="2">Парикмахерские услуги</th>
+          <th itemprop="headline" class="price-list__heading" colspan="2">Парикмахерские услуги</th>
+        </tr>
+
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Стрижка женская (любая длинна)</td>
+          <td itemprop="price" class="price-list__price">2000</td>
+        </tr>
+
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Стрижка мужская</td>
+          <td itemprop="price" class="price-list__price">1500</td>
+        </tr>
+
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Стрижка наголо под машинку</td>
+          <td itemprop="price" class="price-list__price">500</td>
+        </tr>
+
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Стрижка усов, бороды</td>
+          <td itemprop="price" class="price-list__price">500</td>
+        </tr>
+
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Укладка волос феном</td>
+          <td itemprop="price" class="price-list__price">1500</td>
+        </tr>
+
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Причёски вечерние (с использованием шпилек, невидимок, утюжка и плойки)</td>
+          <td itemprop="price" class="price-list__price">от 3000</td>
+        </tr>
+
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Базовый ритуал с маской L'OREAL</td>
+          <td itemprop="price" class="price-list__price">550</td>
         </tr>
 
         <tr>
-          <td class="price-list__name">Стрижка женская (любая длинна)</td>
-          <td class="price-list__price">2000</td>
+          <th itemprop="headline" class="price-list__heading" colspan="2">Детский прейскурант (клиенты до 10 лет)</th>
         </tr>
 
-        <tr>
-          <td class="price-list__name">Стрижка мужская</td>
-          <td class="price-list__price">1500</td>
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Детская стрижка</td>
+          <td itemprop="price" class="price-list__price">700</td>
         </tr>
 
-        <tr>
-          <td class="price-list__name">Стрижка наголо под машинку</td>
-          <td class="price-list__price">500</td>
-        </tr>
-
-        <tr>
-          <td class="price-list__name">Стрижка усов, бороды</td>
-          <td class="price-list__price">500</td>
-        </tr>
-
-        <tr>
-          <td class="price-list__name">Укладка волос феном</td>
-          <td class="price-list__price">1500</td>
-        </tr>
-
-        <tr>
-          <td class="price-list__name">Причёски вечерние (с использованием шпилек, невидимок, утюжка и плойки)</td>
-          <td class="price-list__price">от 3000</td>
-        </tr>
-
-        <tr>
-          <td class="price-list__name">Базовый ритуал с маской L'OREAL</td>
-          <td class="price-list__price">550</td>
-        </tr>
-
-        <tr>
-          <th class="price-list__heading" colspan="2">Детский прейскурант (клиенты до 10 лет)</th>
-        </tr>
-
-        <tr>
-          <td class="price-list__name">Детская стрижка</td>
-          <td class="price-list__price">700</td>
-        </tr>
-
-        <tr>
-          <td class="price-list__name">Стрижка чёлки</td>
-          <td class="price-list__price">200</td>
+        <tr itemscope itemprop="itemListElement" itemtype="http://schema.org/Product">
+          <td itemprop="name" class="price-list__name">Стрижка чёлки</td>
+          <td itemprop="price" class="price-list__price">200</td>
         </tr>
       </table>
 
     </div>
   </main>
 
-  <footer class="page-footer">
+  <footer itemscope itemtype="https://schema.org/WPFooter" class="page-footer">
     <div class="page-footer__inner">
       <div class="social">
         <a href="https://www.instagram.com/beauty.room_spb/" target="_blank" class="social__link">
