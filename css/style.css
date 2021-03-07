@@ -869,7 +869,7 @@ blockquote {
       .contacts__list-item {
         margin-right: 50px;
         margin-bottom: 50px; } }
-    .contacts__list-item span {
+    .contacts__list-item span, .contacts__list-item time {
       color: #9f3e85; }
 
 .map {
